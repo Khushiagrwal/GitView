@@ -1,36 +1,47 @@
 import React from 'react'
 import "../../public/Css/Userinfo.css"
 
-function Userinfo() {
+function Userinfo({user}) {
   return (
     <div>
-        <img src="https://wallpapercave.com/wp/wp5968727.png" width='50' height='50' alt="" />
+        <img src={user.avartar_url} width='50' height='50' alt="" />
         <div>
-            <h5>UserName</h5>
+            <h5>{user.name}</h5>
+            
+            { user.location &&
             <div>
                 <i></i>
-                <span>Location</span>
+                <span>{user.location}</span>
             </div>
+            }
+            
+            { user.blog &&
+            <div>
+                <i></i>
+                <span>{user.blog}</span>
+            </div>
+            }
 
+            {user.email &&
             <div>
                 <i></i>
-                <span>Blog url</span>
+                <span>{user.email}</span>
             </div>
+            }
 
+            {user.followers && 
             <div>
                 <i></i>
-                <span>Email</span>
+                <span>{user.followers}</span>
             </div>
+            }
 
+            {user.following &&
             <div>
                 <i></i>
-                <span>Followers</span>
+                <span>{user.following} Following</span>
             </div>
-
-            <div>
-                <i></i>
-                <span>Following</span>
-            </div>
+            }
         </div>
     </div>
   )
