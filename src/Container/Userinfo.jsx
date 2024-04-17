@@ -4,11 +4,14 @@ import "../../public/Css/Userinfo.css"
 function Userinfo({user}) {
   return (
     <div>
-        <img src={user.avartar_url} width='50' height='50' alt="" />
+        
+        <img src={user.avatar_url}
+                width='50' height='50'
+            alt="" />
         <div>
             <h5>{user.name}</h5>
             
-            { user.location &&
+            { user.location ||
             <div>
                 <i></i>
                 <span>{user.location}</span>
@@ -32,7 +35,7 @@ function Userinfo({user}) {
             {user.followers && 
             <div>
                 <i></i>
-                <span>{user.followers}</span>
+                <span>{user.followers} Followers</span>
             </div>
             }
 

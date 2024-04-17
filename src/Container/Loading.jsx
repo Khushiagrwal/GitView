@@ -1,8 +1,12 @@
 import React from 'react'
+import "../../public/Css/Loading.css"
+import  spinner  from '../../public/Image/spinner.gif'
 
 function Loading() {
   return (
-    <div>Loading</div>
+    <div className="loading">
+    <img src={spinner} alt="loading" />
+  </div>
   )
 }
 

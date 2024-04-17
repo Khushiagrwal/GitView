@@ -1,5 +1,6 @@
 import React from 'react'
 import "../../public/Css/Navbar.css"
+import { Link } from 'react-router-dom'
 
 function Navbar({user}) {
   return (
@@ -7,9 +8,9 @@ function Navbar({user}) {
         <nav>
             <img src={user.avatar_url}
                 width='50' height='50'
-            alt="" />
+                alt="" />
             <h3>{user.name}</h3>
-            <a href="">Search for other user</a>
+            <Link to="/">Search for another user</Link>
         </nav>
     </>
   )
