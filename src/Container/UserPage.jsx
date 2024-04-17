@@ -6,6 +6,7 @@ import Repositories from './Repositories';
 import { getUserData , getUserRepo } from '../api/api';
 import Loading from './Loading';
 import { useParams } from 'react-router-dom';
+import "../../public/Css/UserPage.css"
 
 function UserPage() {
 
@@ -43,16 +44,16 @@ function UserPage() {
     return (
         <>
             {user ? (
-                <>
-                    hello everyone
+                <div className='main-user-page'>
+                    
                     <Navbar user={user} />
             
-                    <div>
+                    <div className="container">
                         <Userinfo user={user} />
                         <Tabs repos={repos} user={user} />
                         <Repositories repos={repos} user={user} />
                     </div>
-                </>
+                </div>
             ) : (
                 <Loading />
             )} 

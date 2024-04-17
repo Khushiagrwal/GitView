@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import "../../public/Css/Input.css"
 import { useNavigate } from 'react-router-dom'; // corrected import statement
 
 
@@ -17,15 +18,25 @@ function Input() {
   };
 
   return (
+    <div className='main-page'>
     <div>
-        github view 
-        search users information 
+    <h1>GitView</h1>
+    
+    <div className='input-box'>
+     {/* <div className='main-page'> */}
+     
+        
+        
         <form onSubmit={handleSubmit}>
             <label>Username</label>
             <input type="text" placeholder='Enter username ' onChange={(e)=>{setUser(e.target.value)}}/>
-            <button type='submit'>Enter</button>
+            <div className='submit-btn'> <button type='submit'>Enter</button></div>
+           
         </form>
     </div>
+    </div>
+    </div>
+    
   );
 }
 

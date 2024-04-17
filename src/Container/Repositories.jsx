@@ -4,9 +4,10 @@ import Repository from './Repository'
 
 function Repositories({user,repos}) {
   return (
-    <section >
+    <section className="repositories">
     {repos.map((repo) => (
       <Repository key={repo.id} repo={repo} user={user} />
+      
     ))}
   </section>
   )
